@@ -89,3 +89,57 @@ Sample Tick Data Format
   "side": "buy",
   "timestamp": "2025-08-20T12:34:56"
 }
+
+
+Run the backend server
+uvicorn src.api.main:app --reload
+
+Control replay via REST API
+
+Start replay
+
+curl -X POST http://localhost:8000/replay/start
+
+
+Pause replay
+
+curl -X POST http://localhost:8000/replay/pause
+
+
+Set replay speed
+
+curl -X POST http://localhost:8000/replay/speed -H "Content-Type: application/json" -d '{"speed": 5.0}'
+
+Open React Web UI
+
+Open http://localhost:3000 in your browser to view the order book visualization.
+
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+requests==2.31.0
+pydantic==1.10.11
+python-dotenv==1.0.0
+
+
+# API Endpoints
+
+Base URL: `http://localhost:8000`
+
+| Endpoint             | Method | Description                          | Request Body                    | Response                     |
+|----------------------|--------|------------------------------------|--------------------------------|------------------------------|
+| `/replay/start`      | POST   | Start or resume order book replay  | None                           | `{ "status": "started" }`    |
+| `/replay/pause`      | POST   | Pause the replay                    | None                           | `{ "status": "paused" }`     |
+| `/replay/speed`      | POST   | Set replay speed                   | `{ "speed": float }`            | `{ "status": "speed set to X" }` |
+| `/orderbook/snapshot`| GET    | Get current order book snapshot    | None                           | JSON order book data         |
+
+---
+
+### Example: Start Replay
+
+```bash
+curl -X POST http://localhost:8000/replay/start
+
+
+curl -X POST http://localhost:8000/replay/speed \
+  -H "Content-Type: application/json" \
+  -d '{"speed": 5.0}'
