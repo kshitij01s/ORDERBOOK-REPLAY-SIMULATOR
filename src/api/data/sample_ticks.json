@@ -1,0 +1,10 @@
+[
+  { "side": "buy", "price": 101.5, "qty": 10 },
+  { "side": "sell", "price": 102.0, "qty": 5 },
+  { "side": "buy", "price": 101.5, "qty": 0 },
+  { "side": "sell", "price": 101.8, "qty": 7 },
+  { "side": "buy", "price": 101.2, "qty": 3 },
+  { "side": "sell", "price": 102.0, "qty": 0 },
+  { "side": "buy", "price": 101.2, "qty": 0 },
+  { "side": "sell", "price": 101.6, "qty": 4 }
+]

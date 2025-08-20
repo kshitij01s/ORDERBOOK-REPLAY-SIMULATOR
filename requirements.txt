@@ -1,0 +1,27 @@
+# === Core Dependencies ===
+fastapi==0.110.1              # API backend
+uvicorn==0.27.1               # ASGI server to run FastAPI
+websockets==12.0              # Binance WebSocket handling
+sortedcontainers==2.4.0       # Efficient order book data structure
+requests==2.32.3              # HTTP requests (for REST or APIs)
+
+# === Data Processing ===
+pandas==2.2.2                 # Tick data manipulation and analysis
+python-dotenv==1.0.1          # Load .env configs if needed
+
+# === Optional (for Streamlit dashboard) ===
+streamlit==1.35.0             # Optional live dashboard alternative to React
+
+# === Optional (for analysis notebooks) ===
+jupyterlab==4.2.0             # Explore order flow in notebooks
+matplotlib==3.9.0             # Plotting depth, imbalance
+plotly==5.22.0                # Interactive heatmaps or visualizations
+
+# === Testing (optional) ===
+pytest==8.2.0                 # Unit testing
+fastapi
+uvicorn
+websockets
+sortedcontainers
+pandas
+requests

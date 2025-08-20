@@ -1,0 +1,9 @@
+exchange: binance
+symbols: ["BTCUSDT", "ETHUSDT",'btcusdt']
+storage_format: parquet
+snapshot_interval_ms: 500
+replay_speed: 1x
+start_timestamp: "2023-01-01T00:00:00Z"
+end_timestamp: "2023-01-01T01:00:00Z"
+replay_speed: 5
+depth_levels: 10
